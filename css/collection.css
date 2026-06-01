@@ -1,0 +1,232 @@
+/* ============================================
+   Collection page specific styles
+   ============================================ */
+
+/* Hero (smaller version) */
+.page-hero {
+    position: relative;
+    height: 750px;
+    background-image: url('../assets/images/collection-hero.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .page-hero .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4));
+        z-index: 1;
+    }
+
+    .page-hero .hero-content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+    }
+
+    .page-hero h1 {
+        font-family: 'Arimo', sans-serif;
+        font-size: 64px;
+        font-weight: 400;
+        color: white;
+        margin: 0;
+    }
+
+/* Section headers */
+.section-header {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.all-products .section-header {
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.recommendations .section-header {
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+
+.section-header h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    font-style: italic;
+    color: #000;
+    text-align: left;
+}
+
+/* Products grid (shared) */
+.products-grid {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    transition: opacity 0.3s ease;
+}
+
+    .products-grid.fade-out {
+        opacity: 0;
+    }
+
+.product-card {
+    background: white;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+    .product-card:hover {
+        box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+        transform: translateY(-4px);
+    }
+
+.product-img {
+    height: 180px;
+    overflow: hidden;
+}
+
+    .product-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s;
+    }
+
+.product-card:hover .product-img img {
+    transform: scale(1.03);
+}
+
+.product-info {
+    padding: 16px;
+}
+
+    .product-info h3 {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        font-style: italic;
+        margin-bottom: 8px;
+    }
+
+.product-price {
+    font-family: 'Arimo', sans-serif;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.product-price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buy-btn {
+    background: var(--color-primary);
+    color: white;
+    border: none;
+    width: 62px;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+    .buy-btn:hover {
+        background: var(--color-primary-dark);
+        transform: translateY(-2px);
+    }
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 50px 0;
+}
+
+    .pagination button {
+        width: 50px;
+        height: 50px;
+        border-radius: 0;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 24px;
+        font-weight: 400;
+        background: #F8F1F1;
+        border: 1px solid #FFF7F7;
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+
+        .pagination button.active {
+            background: #B3B3B3;
+            color: #000;
+        }
+
+        .pagination button:not(.active):hover {
+            background: #e0e0e0;
+        }
+
+    .pagination .arrow {
+        font-size: 32px;
+        line-height: 1;
+    }
+
+/* Recommendation section (reuses product-card) */
+.rec-grid {
+    margin-bottom: 80px;
+}
+
+/* Responsive */
+@media (max-width: 1023px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .page-hero {
+        height: 300px;
+    }
+
+        .page-hero h1 {
+            font-size: 48px;
+        }
+}
+
+@media (max-width: 767px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .page-hero {
+        height: 250px;
+    }
+
+        .page-hero h1 {
+            font-size: 36px;
+        }
+
+    .pagination button {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .section-header h2 {
+        font-size: 28px;
+    }
+}

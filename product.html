@@ -1,0 +1,234 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Air Force — 产品详情</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/product.css">
+</head>
+<body>
+    <!-- 移动端全屏导航 overlay -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay">
+        <div class="mobile-nav-container">
+            <button class="mobile-nav-close" id="mobileNavClose">&times;</button>
+            <ul class="mobile-nav-links">
+                <li><a href="index.html">Home Page</a></li>
+                <li><a href="brand.html">Brand</a></li>
+                <li><a href="collection.html">Product</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="Air Force brand logo" width="185" height="101">
+            </div>
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="index.html">Home Page</a></li>
+                    <li><a href="brand.html">Brand</a></li>
+                    <li><a href="collection.html">Product</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <button class="icon-btn search-btn" aria-label="Search">
+                    <img src="assets/images/icon-search.png" alt="Search" width="24" height="32">
+                </button>
+                <button class="icon-btn cart-btn" id="cartBtn" aria-label="Shopping cart">
+                    <img src="assets/images/icon-cart.png" alt="Cart" width="32" height="32">
+                    <span id="cartCount" class="cart-badge">0</span>
+                </button>
+                <button class="icon-btn user-btn" aria-label="User account">
+                    <img src="assets/images/user-icon.png" alt="User account" width="32" height="32">
+                </button>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 全局搜索浮层 -->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="search-container">
+            <button class="search-close" id="searchClose">&times;</button>
+            <input type="text" id="globalSearchInput" placeholder="Search products...">
+            <button class="search-submit-btn" id="globalSearchSubmit">Search</button>
+        </div>
+    </div>
+
+    <main>
+        <!-- 面包屑导航 -->
+        <div class="breadcrumb">
+            <div class="breadcrumb-container">
+                <a href="index.html">Home</a> &gt; <a href="collection.html">Product</a> &gt; <span id="breadcrumb-product-name">Product Details</span>
+            </div>
+        </div>
+
+        <!-- 产品详情主区域 -->
+        <div class="product-detail-container">
+            <!-- 左侧图片画廊 -->
+            <div class="product-gallery">
+                <div class="main-image">
+                    <img id="main-product-img" src="" alt="Product image">
+                </div>
+                <div class="thumbnail-list" id="thumbnail-list">
+                    <!-- 缩略图动态生成 -->
+                </div>
+            </div>
+
+            <!-- 右侧产品信息与操作 -->
+            <div class="product-info">
+                <h1 id="product-name">Loading...</h1>
+                <div class="price-section">
+                    <span class="current-price" id="current-price"></span>
+                    <span class="original-price" id="original-price"></span>
+                </div>
+                <div class="rating-section">
+                    <div class="stars" id="product-stars"></div>
+                    <span class="review-count" id="review-count"></span>
+                </div>
+                <div class="meta-info" id="product-meta"></div>
+
+                <!-- 尺寸选择 -->
+                <div class="variant-group">
+                    <label>Size:</label>
+                    <div class="size-options" id="size-options"></div>
+                </div>
+
+                <!-- 颜色选择 -->
+                <div class="variant-group">
+                    <label>Color:</label>
+                    <div class="color-options" id="color-options"></div>
+                </div>
+
+                <!-- 数量选择 -->
+                <div class="quantity-group">
+                    <label>Qty:</label>
+                    <div class="quantity-selector">
+                        <button class="qty-btn" id="qty-minus">-</button>
+                        <span id="qty-value">1</span>
+                        <button class="qty-btn" id="qty-plus">+</button>
+                    </div>
+                </div>
+
+                <!-- Add to Cart 按钮 -->
+                <button class="add-to-cart-btn" id="addToCartBtn" disabled>Add to Cart</button>
+
+                <!-- 次要操作 -->
+                <div class="secondary-actions">
+                    <button class="wishlist-action" id="wishlistAction">♡ Wishlist</button>
+                    <button class="share-action" id="shareAction">⇧ Share</button>
+                </div>
+
+                <!-- 服务信息 -->
+                <div class="service-info">
+                    <span>✓ Free Shipping</span>
+                    <span>✓ 30-Day Returns</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 产品描述区 -->
+        <div class="product-description-section">
+            <div class="section-header">
+                <h2>Product Description</h2>
+                <div class="blue-line"></div>
+            </div>
+            <div class="description-content" id="product-description">
+                <!-- 动态填充 -->
+            </div>
+        </div>
+
+        <!-- You May Also Like 区域 -->
+        <div class="recommendations-section">
+            <div class="section-header">
+                <h2>You May Also Like</h2>
+                <div class="blue-line"></div>
+            </div>
+            <div id="related-products-grid" class="products-grid related-grid">
+                <!-- 相关产品卡片动态渲染 -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (与首页一致) -->
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="footer-contact-item footer-logo-item">
+                <div class="footer-brand-logo">
+                    <img src="assets/images/logo.png" alt="Air Force brand logo">
+                </div>
+            </div>
+            <div class="footer-contact-item">
+                <div class="footer-icon-circle">
+                    <img src="assets/images/icon-phone.png" alt="Service hotline">
+                </div>
+                <h4>Service Hotline</h4>
+                <p>400-668-3068</p>
+            </div>
+            <div class="footer-contact-item">
+                <div class="footer-icon-circle">
+                    <img src="assets/images/icon-headset.png" alt="Partnership agreement">
+                </div>
+                <h4>Partnership Agreement</h4>
+                <p>186-5799-9919</p>
+            </div>
+            <div class="footer-contact-item">
+                <div class="footer-icon-circle">
+                    <img src="assets/images/icon-location.png" alt="Company address">
+                </div>
+                <h4>Company Address</h4>
+                <p>Gesamilidi Dome District, Shudu Road 188, City</p>
+            </div>
+        </div>
+        <div class="footer-links-grid">
+            <div class="footer-col">
+                <h4>Brand</h4>
+                <ul>
+                    <li><a href="#">Brand Introduction</a></li>
+                    <li><a href="#">Development History</a></li>
+                    <li><a href="#">Team Spirit</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Product</h4>
+                <ul>
+                    <li><a href="#">Full River Red</a></li>
+                    <li><a href="#">Conquering Demons</a></li>
+                    <li><a href="#">Unparalleled</a></li>
+                    <li><a href="#">New Soul</a></li>
+                    <li><a href="#">Lure</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Join</h4>
+                <ul>
+                    <li><a href="#">Investment Promotion Join</a></li>
+                    <li><a href="#">Cooperation Consultation</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Join us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Air Force. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/cart.js"></script>
+    <script src="js/product.js"></script>
+</body>
+</html>

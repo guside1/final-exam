@@ -1,0 +1,412 @@
+/* ============================================
+   Checkout page specific styles
+   ============================================ */
+
+/* --- 顶部标题区（无导航栏）--- */
+.checkout-header {
+    background: #1E2A3E;
+    padding: 20px 40px;
+}
+
+.checkout-header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+}
+.checkout-header .logo {
+    width: auto; /* 不要固定宽度 */
+    height: auto;
+    display: flex; /* 防止内联元素问题 */
+    align-items: center;
+}
+    .checkout-header .logo img {
+        height: 200px;
+        width: auto;
+        max-width: none; /* 取消可能存在的最大宽度限制 */
+        display: block;
+    }
+
+.checkout-header h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 64px;
+    font-weight: 600;
+    font-style: italic;
+    color: #FFFFFF;
+    margin: 0;
+    position: relative;
+    display: inline-block;
+}
+
+    .checkout-header h1::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: #0070F3;
+    }
+
+/* --- 收货地址区 --- */
+.address-section {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.address-card {
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.address-icon img {
+    width: 40px;
+    height: 40px;
+}
+
+.address-text {
+    flex: 1;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: #000;
+    white-space: pre-line;
+}
+
+.edit-address-btn {
+    background: none;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: rgba(0,0,0,0.52);
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+    .edit-address-btn:hover {
+        color: #0070F3;
+    }
+
+/* --- 商品列表区 --- */
+.items-section {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.cart-items-list {
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+    border-bottom: 1px solid #f0f0f0;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+    .cart-item:last-child {
+        border-bottom: none;
+    }
+
+.checkout-item-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+    .checkout-item-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+.checkout-item-info {
+    flex: 2;
+    margin-left: 20px;
+}
+
+.item-model {
+    font-family: 'Arimo', sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: #111111;
+    margin-bottom: 5px;
+}
+
+.item-brand {
+    font-family: 'Arimo', sans-serif;
+    font-size: 20px;
+    color: #000;
+    margin-bottom: 5px;
+}
+
+.item-desc {
+    font-family: 'Arimo', sans-serif;
+    font-size: 24px;
+    color: #000;
+}
+
+.checkout-item-price {
+    text-align: right;
+    min-width: 180px;
+}
+
+.item-price-amount {
+    font-family: 'Arimo', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    color: #000;
+}
+
+.item-quantity {
+    font-family: 'Arimo', sans-serif;
+    font-size: 24px;
+    color: #474747;
+    margin-top: 5px;
+}
+
+/* --- 支付详情区 --- */
+.payment-details {
+    max-width: 1200px;
+    margin: 30px auto 50px;
+    padding: 30px 40px;
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+}
+
+.payment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 30px;
+}
+
+    .payment-header h2 {
+        font-family: 'Inter', sans-serif;
+        font-size: 64px;
+        font-weight: 600;
+        color: #000;
+        margin: 0;
+    }
+
+.item-count {
+    font-family: 'Inter', sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+    color: #7D7C7C;
+}
+
+.price-breakdown {
+    margin-bottom: 30px;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 15px;
+}
+
+    .price-row .label {
+        font-family: 'Inter', sans-serif;
+        font-size: 48px;
+        font-weight: 500;
+        color: #000;
+    }
+
+    .price-row .value {
+        font-family: 'Arimo', sans-serif;
+        font-size: 40px;
+        color: #000;
+    }
+
+.discount-row .value {
+    color: #c0392b;
+}
+
+.divider {
+    height: 1px;
+    background: #e0e0e0;
+    margin: 20px 0;
+}
+
+.payment-methods {
+    display: flex;
+    gap: 40px;
+}
+
+.payment-option {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+    .payment-option.selected {
+        border-color: #0070F3;
+        background: rgba(0,112,243,0.05);
+    }
+
+    .payment-option img {
+        width: 48px;
+        height: 48px;
+        object-fit: contain;
+    }
+
+    .payment-option span {
+        font-family: 'Arimo', sans-serif;
+        font-size: 40px;
+        font-weight: 700;
+        color: #000;
+    }
+
+.final-amount {
+    text-align: right;
+    margin: 30px 0 20px;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 20px;
+}
+
+.final-price {
+    font-family: 'Arimo', sans-serif;
+    font-size: 96px;
+    font-weight: 400;
+    color: #000;
+}
+
+.discount-badge {
+    font-family: 'Inter', sans-serif;
+    font-size: 45px;
+    color: #000;
+    margin-top: 10px;
+}
+
+.place-order-btn {
+    width: 100%;
+    background: #0088FF;
+    border: none;
+    border-radius: 38px;
+    height: 120px;
+    font-family: 'Inter', sans-serif;
+    font-size: 56px;
+    font-weight: 400;
+    color: white;
+    cursor: pointer;
+    transition: background 0.2s, opacity 0.2s;
+}
+
+    .place-order-btn.disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+
+    .place-order-btn:not(.disabled):hover {
+        background: #0066cc;
+    }
+
+/* 响应式 */
+@media (max-width: 1023px) {
+    .checkout-header h1 {
+        font-size: 48px;
+    }
+
+    .payment-header h2 {
+        font-size: 48px;
+    }
+
+    .item-count {
+        font-size: 28px;
+    }
+
+    .price-row .label {
+        font-size: 36px;
+    }
+
+    .price-row .value {
+        font-size: 32px;
+    }
+
+    .payment-option span {
+        font-size: 32px;
+    }
+
+    .final-price {
+        font-size: 72px;
+    }
+
+    .discount-badge {
+        font-size: 36px;
+    }
+
+    .place-order-btn {
+        font-size: 42px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 767px) {
+    .checkout-header-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .address-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .checkout-item-info {
+        margin-left: 0;
+    }
+
+    .checkout-item-price {
+        text-align: left;
+    }
+
+    .payment-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .price-row {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .payment-methods {
+        flex-wrap: wrap;
+    }
+
+    .final-amount {
+        text-align: left;
+    }
+}

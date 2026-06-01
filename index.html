@@ -1,0 +1,220 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Air Force — 高端碳纤维钓竿</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <!-- 移动端全屏导航 overlay（初始隐藏） -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay">
+        <div class="mobile-nav-container">
+            <button class="mobile-nav-close" id="mobileNavClose">&times;</button>
+            <ul class="mobile-nav-links">
+                <li><a href="index.html">Home Page</a></li>
+                <li><a href="brand.html">Brand</a></li>
+                <li><a href="collection.html">Product</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="Air Force brand logo" width="185" height="101">
+            </div>
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="index.html">Home Page</a></li>
+                    <li><a href="brand.html">Brand</a></li>
+                    <li><a href="collection.html">Product</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <button class="icon-btn search-btn" aria-label="Search">
+                    <img src="assets/images/icon-search.png" alt="Search" width="24" height="32">
+                </button>
+                <button class="icon-btn cart-btn" id="cartBtn" aria-label="Shopping cart">
+                    <img src="assets/images/icon-cart.png" alt="Cart" width="32" height="32">
+                    <span id="cartCount" class="cart-badge">0</span>
+                </button>
+                <button class="icon-btn user-btn" aria-label="User account">
+                    <img src="assets/images/user-icon.png" alt="User account" width="32" height="32">
+                </button>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <!-- 全局搜索浮层 -->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="search-container">
+            <button class="search-close" id="searchClose">&times;</button>
+            <input type="text" id="globalSearchInput" placeholder="Search products...">
+            <button class="search-submit-btn" id="globalSearchSubmit">Search</button>
+        </div>
+    </div>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1>Cast Further<br>Fish Smarter</h1>
+                <p class="hero-sub">Professional‑grade carbon fiber rods engineered for sensitivity, distance, and absolute control. Lightweight, balanced, and battle‑tested.</p>
+                <div class="hero-play">
+                    <img src="assets/images/play-btn.png" alt="Play promotional video" width="40" height="40">
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products -->
+        <section class="featured-products">
+            <div class="section-header">
+                <div class="section-title-left">
+                    <span class="pre-title">Air Force series Jiaoliangni product series</span>
+                    <div class="blue-line"></div>
+                </div>
+                <div class="section-tag"> </div>
+            </div>
+            <div class="products-grid">
+                <!-- Product Card 1 -->
+                <article class="product-card">
+                    <div class="product-img">
+                        <img src="assets/images/product1.jpg" alt="Titan Pro Carbon fishing rod at sunset">
+                    </div>
+                    <div class="product-info">
+                        <h3>Titan Pro Carbon</h3>
+                        <div class="product-price-row">
+                            <span class="price">¥599</span>
+                            <button class="buy-btn" data-product="Titan Pro Carbon">Buy</button>
+                        </div>
+                    </div>
+                </article>
+                <!-- Product Card 2 -->
+                <article class="product-card">
+                    <div class="product-img">
+                        <img src="assets/images/product2.jpg" alt="Driftwood Spinning Rod by the ocean">
+                    </div>
+                    <div class="product-info">
+                        <h3>Driftwood Spinning Rod</h3>
+                        <div class="product-price-row">
+                            <span class="price">¥459</span>
+                            <button class="buy-btn" data-product="Driftwood Spinning Rod">Buy</button>
+                        </div>
+                    </div>
+                </article>
+                <!-- Product Card 3 -->
+                <article class="product-card">
+                    <div class="product-img">
+                        <img src="assets/images/product3.jpg" alt="Summit Casting Rod in action">
+                    </div>
+                    <div class="product-info">
+                        <h3>Summit Casting Rod</h3>
+                        <div class="product-price-row">
+                            <span class="price">¥729</span>
+                            <button class="buy-btn" data-product="Summit Casting Rod">Buy</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Brand Story -->
+        <section class="brand-story">
+            <div class="brand-story-container">
+                <div class="brand-story-image">
+                    <img src="assets/images/brand-story.jpg" alt="Professional angler holding a trophy fish">
+                </div>
+                <div class="brand-story-text">
+                    <h2>Air Force</h2>
+                    <p class="story-subtitle">Precision Airborne. Landing the Impossible.</p>
+                    <div class="blue-line"></div>
+                    <p class="story-p1">Air Force was founded in 2016 and is a pioneering force in the Chinese fishing gear industry that specializes in the research and development of aerospace-grade carbon fiber fishing rods.</p>
+                    <p class="story-p2">Every blank uses aerospace-grade prepreg carbon, cured under heat and pressure to eliminate voids. The result? Faster tip recovery, unmatched sensitivity, and a backbone that never quivers when the big one strikes.</p>
+                    <button class="explore-btn">Explore more</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+
+        <div class="footer-top">
+            <div class="footer-contact-item footer-logo-item">
+                <div class="footer-brand-logo">
+                    <img src="assets/images/logo.png" alt="Air Force brand logo">
+                </div>
+            </div>
+            <div class="footer-contact-item">
+                <div class="footer-icon-circle">
+                    <img src="assets/images/icon-phone.png" alt="Service hotline">
+                </div>
+                <h4>Service Hotline</h4>
+                <p>400-668-3068</p>
+            </div>
+            <div class="footer-contact-item">
+                <div class="footer-icon-circle">
+                    <img src="assets/images/icon-headset.png" alt="Partnership agreement">
+                </div>
+                <h4>Partnership Agreement</h4>
+                <p>186-5799-9919</p>
+            </div>
+            <div class="footer-contact-item">
+                <div class="footer-icon-circle">
+                    <img src="assets/images/icon-location.png" alt="Company address">
+                </div>
+                <h4>Company Address</h4>
+                <p>Gesamilidi Dome District, Shudu Road 188, City</p>
+            </div>
+        </div>
+        <div class="footer-links-grid">
+            <div class="footer-col">
+                <h4>Brand</h4>
+                <ul>
+                    <li><a href="#">Brand Introduction</a></li>
+                    <li><a href="#">Development History</a></li>
+                    <li><a href="#">Team Spirit</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Product</h4>
+                <ul>
+                    <li><a href="#">Full River Red</a></li>
+                    <li><a href="#">Conquering Demons</a></li>
+                    <li><a href="#">Unparalleled</a></li>
+                    <li><a href="#">New Soul</a></li>
+                    <li><a href="#">Lure</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Join</h4>
+                <ul>
+                    <li><a href="#">Investment Promotion Join</a></li>
+                    <li><a href="#">Cooperation Consultation</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Join us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Air Force. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="js/cart.js"></script>
+    <script src="js/index.js"></script>
+ 
+</body>
+</html>

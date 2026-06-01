@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Air Force — 购物车</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@400;700&family=Arimo:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=Arima+Madurai:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+    <!-- 移动端导航 overlay -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay">
+        <div class="mobile-nav-container">
+            <button class="mobile-nav-close" id="mobileNavClose">&times;</button>
+            <ul class="mobile-nav-links">
+                <li><a href="index.html">Home Page</a></li>
+                <li><a href="brand.html">Brand</a></li>
+                <li><a href="collection.html">Product</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="Air Force brand logo" width="185" height="101">
+            </div>
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="index.html">Home Page</a></li>
+                    <li><a href="brand.html">Brand</a></li>
+                    <li><a href="collection.html">Product</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <button class="icon-btn search-btn" aria-label="Search">
+                    <img src="assets/images/icon-search.png" alt="Search" width="24" height="32">
+                </button>
+                <button class="icon-btn cart-btn" id="cartBtn" aria-label="Shopping cart">
+                    <img src="assets/images/icon-cart.png" alt="Cart" width="32" height="32">
+                    <span id="cartCount" class="cart-badge">0</span>
+                </button>
+                <button class="icon-btn user-btn" aria-label="User account">
+                    <img src="assets/images/user-icon.png" alt="User account" width="32" height="32">
+                </button>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="cart-main">
+        <!-- 购物车标题区（无 Logo，标题左对齐） -->
+        <div class="cart-header-banner">
+            <div class="cart-header-content">
+                <h1>Shopping cart</h1>
+                <div class="cart-search">
+                    <div class="search-input-wrapper">
+                        <img src="assets/images/icon-search.png" alt="search" class="search-icon">
+                        <input type="text" placeholder="Search in cart...">
+                    </div>
+                    <button class="search-btn-cart">search</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 操作栏 + 表头 -->
+        <div class="cart-actions-header">
+            <div class="cart-actions-left">
+                <div class="checkbox-all-wrapper">
+                    <input type="checkbox" id="selectAllCheckbox" class="checkbox-all">
+                    <label for="selectAllCheckbox">All</label>
+                </div>
+                <button class="delete-btn" id="deleteSelectedBtn">Delete</button>
+            </div>
+            <div class="cart-actions-right">
+                <a href="collection.html" class="continue-shopping">Continue shopping</a>
+            </div>
+        </div>
+        <div class="cart-table-header">
+            <span class="col-product">PRODUCT</span>
+            <span class="col-number">NUMBER</span>
+        </div>
+
+        <!-- 商品列表区域 -->
+        <div id="cart-items-container" class="cart-items-container">
+            <!-- JS 动态渲染 -->
+        </div>
+
+        <!-- 空购物车提示 -->
+        <div id="empty-cart-message" class="empty-cart-message" style="display: none;">
+            <p>Your cart is empty.</p>
+            <a href="collection.html" class="shop-now-link">Shop Now</a>
+        </div>
+
+        <!-- 底部结算区（上下两层） -->
+        <div class="cart-checkout-bar">
+            <div class="checkout-top-row">
+                <div class="selected-info">
+                    <span class="selected-label">Selected</span>
+                    <div class="selected-count-box"><span id="selectedCountDisplay">0</span></div>
+                </div>
+                <div class="total-info">
+                    <span class="total-label">Total：</span>
+                    <span id="totalPriceDisplay" class="total-price">¥ 0.00</span>
+                </div>
+            </div>
+            <div class="checkout-bottom-row">
+                <button id="checkoutBtn" class="checkout-button">Checkout</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="footer-contact-item footer-logo-item">
+                <div class="footer-brand-logo">
+                    <img src="assets/images/logo.png" alt="Air Force brand logo">
+                </div>
+            </div>
+            <div class="footer-contact-item">
+                <div class="footer-icon-circle">
+                    <img src="assets/images/icon-phone.png" alt="Service hotline">
+                </div>
+                <h4>Service Hotline</h4>
+                <p>400-668-3068</p>
+            </div>
+            <div class="footer-contact-item">
+                <div class="footer-icon-circle">
+                    <img src="assets/images/icon-headset.png" alt="Partnership agreement">
+                </div>
+                <h4>Partnership Agreement</h4>
+                <p>186-5799-9919</p>
+            </div>
+            <div class="footer-contact-item">
+                <div class="footer-icon-circle">
+                    <img src="assets/images/icon-location.png" alt="Company address">
+                </div>
+                <h4>Company Address</h4>
+                <p>Gesamilidi Dome District, Shudu Road 188, City</p>
+            </div>
+        </div>
+        <div class="footer-links-grid">
+            <div class="footer-col">
+                <h4>Brand</h4>
+                <ul>
+                    <li><a href="#">Brand Introduction</a></li>
+                    <li><a href="#">Development History</a></li>
+                    <li><a href="#">Team Spirit</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Product</h4>
+                <ul>
+                    <li><a href="#">Full River Red</a></li>
+                    <li><a href="#">Conquering Demons</a></li>
+                    <li><a href="#">Unparalleled</a></li>
+                    <li><a href="#">New Soul</a></li>
+                    <li><a href="#">Lure</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Join</h4>
+                <ul>
+                    <li><a href="#">Investment Promotion Join</a></li>
+                    <li><a href="#">Cooperation Consultation</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Join us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Air Force. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/cart.js"></script>
+    <script src="js/cart-page.js"></script>
+</body>
+</html>

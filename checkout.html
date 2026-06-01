@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Air Force — 结算页面</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Arimo:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/checkout.css">
+</head>
+<body>
+    <!-- 不需要顶部导航栏，只有标题区 -->
+    <div class="checkout-header">
+        <div class="checkout-header-content">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="Air Force brand logo">
+            </div>
+            <h1>Check Out</h1>
+        </div>
+    </div>
+
+    <main class="checkout-main">
+        <!-- 收货地址区 -->
+        <div class="address-section">
+            <div class="address-card">
+                <div class="address-icon">
+                    <img src="assets/images/icon-location.png" alt="Location">
+                </div>
+                <div class="address-text" id="addressText">
+                    <!-- 动态渲染地址 -->
+                </div>
+                <button class="edit-address-btn" id="editAddressBtn">Add/Modify</button>
+            </div>
+        </div>
+
+        <!-- 商品列表区 -->
+        <div class="items-section">
+            <div id="cart-items-container" class="cart-items-list">
+                <!-- JS 动态渲染选中商品 -->
+            </div>
+        </div>
+
+        <!-- 支付详情区 -->
+        <div class="payment-details">
+            <div class="payment-header">
+                <h2>Payment Details</h2>
+                <span class="item-count" id="itemCount">0 items</span>
+            </div>
+            <div class="price-breakdown">
+                <div class="price-row">
+                    <span class="label">Total price</span>
+                    <span class="value" id="totalPrice">0.00RMB</span>
+                </div>
+                <div class="price-row discount-row">
+                    <span class="label">Discount</span>
+                    <span class="value" id="discountAmount">0.00RMB</span>
+                </div>
+                <div class="divider"></div>
+                <div class="price-row final-row">
+                    <span class="label">Payment:</span>
+                    <div class="payment-methods">
+                        <div class="payment-option" data-method="alipay">
+                            <img src="assets/images/alipay.png" alt="Alipay" onerror="this.style.display='none'">
+                            <span>Ali pay</span>
+                        </div>
+                        <div class="payment-option" data-method="wechat">
+                            <img src="assets/images/wechatpay.png" alt="Wechat Pay" onerror="this.style.display='none'">
+                            <span>Wechat pay</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="final-amount">
+                <span class="final-price" id="finalPrice">3170.00RMB</span>
+                <div class="discount-badge" id="discountBadge">Discount:-128.00RMB</div>
+            </div>
+            <button class="place-order-btn" id="placeOrderBtn">PLACE ORDER</button>
+        </div>
+    </main>
+
+    <!-- Footer (与首页一致) -->
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="footer-contact-item footer-logo-item">
+                <div class="footer-brand-logo">
+                    <img src="assets/images/logo.png" alt="Air Force brand logo">
+                </div>
+            </div>
+            <div class="footer-contact-item">
+                <div class="footer-icon-circle">
+                    <img src="assets/images/icon-phone.png" alt="Service hotline">
+                </div>
+                <h4>Service Hotline</h4>
+                <p>400-668-3068</p>
+            </div>
+            <div class="footer-contact-item">
+                <div class="footer-icon-circle">
+                    <img src="assets/images/icon-headset.png" alt="Partnership agreement">
+                </div>
+                <h4>Partnership Agreement</h4>
+                <p>186-5799-9919</p>
+            </div>
+            <div class="footer-contact-item">
+                <div class="footer-icon-circle">
+                    <img src="assets/images/icon-location.png" alt="Company address">
+                </div>
+                <h4>Company Address</h4>
+                <p>Gesamilidi Dome District, Shudu Road 188, City</p>
+            </div>
+        </div>
+        <div class="footer-links-grid">
+            <div class="footer-col">
+                <h4>Brand</h4>
+                <ul>
+                    <li><a href="#">Brand Introduction</a></li>
+                    <li><a href="#">Development History</a></li>
+                    <li><a href="#">Team Spirit</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Product</h4>
+                <ul>
+                    <li><a href="#">Full River Red</a></li>
+                    <li><a href="#">Conquering Demons</a></li>
+                    <li><a href="#">Unparalleled</a></li>
+                    <li><a href="#">New Soul</a></li>
+                    <li><a href="#">Lure</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Join</h4>
+                <ul>
+                    <li><a href="#">Investment Promotion Join</a></li>
+                    <li><a href="#">Cooperation Consultation</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Join us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Air Force. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/cart.js"></script>
+    <script src="js/checkout.js"></script>
+</body>
+</html>

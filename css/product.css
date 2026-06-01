@@ -1,0 +1,460 @@
+/* ============================================
+   Product page specific styles
+   ============================================ */
+
+/* Breadcrumb */
+.breadcrumb {
+    background: white;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 15px 0;
+}
+
+.breadcrumb-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    color: #888;
+}
+
+.breadcrumb a {
+    color: #888;
+    text-decoration: none;
+}
+
+    .breadcrumb a:hover {
+        color: #0070F3;
+    }
+
+.breadcrumb span {
+    color: #333;
+}
+
+/* Product detail main layout */
+.product-detail-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    background: #f5f5f0;
+    padding: 60px;
+    border-radius: 20px;;
+    padding: 60px;
+    border-radius: 20px;
+}
+
+/* Gallery */
+.product-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.main-image {
+    background: #f8f8f8;
+    border-radius: 12px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .main-image img {
+        max-width: 90%;
+        max-height: 90%;
+        object-fit: contain;
+    }
+
+.thumbnail-list {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+    .thumbnail-list img {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 8px;
+        cursor: pointer;
+        border: 2px solid transparent;
+        transition: border 0.2s;
+    }
+
+        .thumbnail-list img.active {
+            border-color: #0070F3;
+        }
+
+/* Product info */
+.product-info h1 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    border-left: 4px solid #0070F3;
+    padding-left: 16px;
+}
+
+.price-section {
+    display: flex;
+    align-items: baseline;
+    gap: 15px;
+    margin-bottom: 12px;
+}
+
+.current-price {
+    font-family: 'Arimo', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #000;
+}
+
+.original-price {
+    font-family: 'Arimo', sans-serif;
+    font-size: 20px;
+    color: #999;
+    text-decoration: line-through;
+}
+
+.rating-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.stars {
+    color: #F1C40F;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+.review-count {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #666;
+}
+
+.meta-info {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 24px;
+}
+
+/* Variant groups */
+.variant-group {
+    margin-bottom: 24px;
+}
+
+    .variant-group label {
+        display: block;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+
+.size-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.size-btn {
+    min-width: 60px;
+    height: 40px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: white;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+    .size-btn.selected {
+        border-color: #0070F3;
+        background: rgba(0,112,243,0.05);
+        color: #0070F3;
+    }
+
+.color-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.color-option {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.2s;
+}
+
+    .color-option.selected {
+        border-color: #0070F3;
+        box-shadow: 0 0 0 2px white, 0 0 0 4px #0070F3;
+    }
+
+/* Quantity selector */
+.quantity-group {
+    margin-bottom: 24px;
+}
+
+    .quantity-group label {
+        display: block;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.qty-btn {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.2s;
+}
+
+    .qty-btn:hover {
+        background: #f0f0f0;
+    }
+
+#qty-value {
+    min-width: 50px;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+}
+
+/* Add to Cart button */
+.add-to-cart-btn {
+    width: 100%;
+    background: #0070F3;
+    border: none;
+    border-radius: 8px;
+    height: 56px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-bottom: 20px;
+}
+
+    .add-to-cart-btn:hover:not(:disabled) {
+        background: #005FCE;
+        transform: translateY(-1px);
+    }
+
+    .add-to-cart-btn:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+
+/* Secondary actions */
+.secondary-actions {
+    display: flex;
+    gap: 4%;
+    margin-bottom: 24px;
+}
+
+.wishlist-action, .share-action {
+    width: 48%;
+    height: 44px;
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 8px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+    .wishlist-action:hover, .share-action:hover {
+        background: #f8f8f8;
+    }
+
+    .wishlist-action.active {
+        color: #e74c3c;
+        border-color: #e74c3c;
+    }
+
+/* Service info */
+.service-info {
+    display: flex;
+    gap: 20px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #666;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 20px;
+}
+
+/* Product Description Section */
+.product-description-section {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 40px;
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+}
+
+.section-header {
+    margin-bottom: 30px;
+}
+
+    .section-header h2 {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+
+.blue-line {
+    width: 60px;
+    height: 2px;
+    background: #0070F3;
+}
+
+.description-content {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333;
+}
+
+/* You May Also Like */
+.recommendations-section {
+    max-width: 1200px;
+    margin: 0 auto 80px;
+    padding: 0 40px;
+}
+
+.related-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+}
+/* Reuse product-card styles from collection.css */
+.product-card {
+    background: white;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+    .product-card:hover {
+        box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+        transform: translateY(-4px);
+    }
+
+.product-img {
+    height: 180px;
+    overflow: hidden;
+}
+
+    .product-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+.product-info {
+    padding: 16px;
+}
+
+    .product-info h3 {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+
+.product-price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-price {
+    font-family: 'Arimo', sans-serif;
+    font-size: 20px;
+}
+
+.buy-btn {
+    background: #0070F3;
+    color: white;
+    border: none;
+    width: 62px;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+    .buy-btn:hover {
+        background: #005FCE;
+        transform: translateY(-2px);
+    }
+
+/* Responsive */
+@media (max-width: 1023px) {
+    .product-detail-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .related-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .product-detail-container {
+        padding: 0 20px;
+    }
+
+    .breadcrumb-container {
+        padding: 0 20px;
+    }
+
+    .product-info h1 {
+        font-size: 28px;
+    }
+
+    .current-price {
+        font-size: 28px;
+    }
+
+    .related-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .thumbnail-list img {
+        width: 60px;
+        height: 60px;
+    }
+}
